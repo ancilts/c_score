@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<title>CREDIT SCORE</title>
+<link type="jpg" rel="icon" href="static/icon.jpg">
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('{{ url_for("static", filename="background.png") }}');
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            align-items: center;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #000000;
+      background-color: #31b05f;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    form {
+      background-color:rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      font-display: #000000;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+  </style>
+</head>
+
+
+<body>
+
+  <h1>CREDIT SCORE</h1>
+  <form action="/prediction.html" method="post">
+    <div>
+      <label for="Age">Age:</label>
+      <input type="number" id="Age" name="Age" placeholder="Enter the Age" required>
+    </div>
+
+    <div>
+      <label for="Annual_Income">Annual_Income:</label>
+      <input type="number" id="Annual_Income" name="Annual_Income" placeholder="Enter Annual Income" required>
+    </div>
+
+    <div>
+    <label for="Num_of_Delayed_Payment">Num_of_Delayed_Payment:</label>
+    <input type="number" id="Num_of_Delayed_Payment" name="Num_of_Delayed_Payment" placeholder="Enter the Number Of Delayed Payments" required>
+    </div>
+
+    <div>
+    <label for="Num_Bank_Accounts">Num_Bank_Accounts:</label>
+    <input type="number" id="Num_Bank_Accounts" name="Num_Bank_Accounts" placeholder="Enter Number of Bank Accounts" required>
+    </div>
+
+    <div>
+    <label for="Outstanding_Debt">Outstanding_Debt:</label>
+    <input type="number" id="Outstanding_Debt" name="Outstanding_Debt" placeholder="Enter total Outstanding Debt" required>
+    </div>
+    
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
+</body>
+
+</html>
